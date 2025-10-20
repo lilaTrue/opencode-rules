@@ -1,0 +1,59 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "instructions": [".rules/*.md"],
+
+    /* TOOLS EXPLAIN IN OPENCODE
+    *   write   : create a new file
+    *   edit    : edit existing file
+    *   bash    : interact with terminal
+    *   read    : read existing file
+    *   grep    : search file contents using regular expressions
+    *   glop    : find files by pattern matching
+    *   list    : list files and directories in a given path
+    *   patch   : apply patches to files
+    *   todowrite : manage todo lists during coding sessions
+    *   todoread  : read existing todo lists
+    *   webfetch  : fetch web content
+    */
+
+    "agent": {
+        // Agent for debug Anythings
+        "debug-code" : {
+            "description": "Agent for debug Anythings",
+            "mode" : "subagent",
+            "prompt": "{file:.promptes/debug.md}",
+            "tools": {
+                "write" : false,
+                "edit" : true,
+                "bash" : true,
+                "read" : true,
+                "grep" : true,
+                "glop" : true,
+                "list" : true,
+                "patch" : true,
+                "todowrite" : true,
+                "todoread" : true,
+                "webfetch" : true
+            }
+        },
+        // Agent for github Actions
+        "github-action" : {
+            "description": "Agent for github actions",
+            "mode" : "subagent",
+            "prompt": "{file:.promptes/github.md}",
+            "tools": {
+                "write" : false,
+                "edit" : true,
+                "bash" : true,
+                "read" : true,
+                "grep" : true,
+                "glop" : true,
+                "list" : false,
+                "patch" : true,
+                "todowrite" : false,
+                "todoread" : false,
+                "webfetch" : false
+            }
+        }
+    }
+}
