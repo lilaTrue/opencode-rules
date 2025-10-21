@@ -6,6 +6,7 @@
         "debug-code" : {
             "description": "Agent for debug Anythings",
             "mode" : "subagent",
+            "temperature": 0.1,
             "prompt": "{file:.promptes/debug.md}",
             "tools": {
                 "write" : false,
@@ -24,6 +25,7 @@
         "github-action" : {
             "description": "Agent for github actions",
             "mode" : "subagent",
+            "temperature": 0.2,
             "prompt": "{file:.promptes/github.md}",
             "tools": {
                 "write" : false,
@@ -42,6 +44,7 @@
         "codebase-analyse" : {
             "description": "Agent for analyse 100% codebase",
             "mode" : "subagent",
+            "temperature": 0.1,
             "prompt" : "{file:.promptes/codebase_analyse.md}",
             "tools": {
                 "write" : false,
@@ -60,6 +63,7 @@
         "project-thinker" : {
             "description" : "Agent for just thinks a project",
             "mode" : "primary",
+            "temperature": 0.5,
             "prompt" : "{file:.promptes/project_thinkers.md}",
             "tools" : {
                 "write" : false,
@@ -79,7 +83,27 @@
             "description" : "Agent for just design a UI/UX",
             "mode" : "primary",
             "prompt" : "{file:.promptes/designer.md}",
+            "temperature": 0.3,
             "tools" : {
+                "write" : true,
+                "edit" : true,
+                "bash" : true,
+                "read" : true,
+                "grep" : true,
+                "glob" : true,
+                "list" : true,
+                "patch" : true,
+                "todowrite" : true,
+                "todoread" : true,
+                "webfetch" : true
+            }
+        },
+        "coding" : {
+            "description": "CODE ANYTHING",
+            "mode" : "primary",
+            "temperature": 0.1,
+            "prompt" : "{file:.promptes/coding.md}",
+            "tools": {
                 "write" : true,
                 "edit" : true,
                 "bash" : true,
