@@ -3,6 +3,12 @@
     "instructions": [".rules/*.md"],
 
     "agent": {
+        "build": {
+            "disable": true
+        },
+        "general": {
+            "disable": true
+        },
         "debug-code" : {
             "description": "Agent for debug Anythings",
             "mode" : "primary",
