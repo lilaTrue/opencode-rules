@@ -5,7 +5,7 @@
     "agent": {
         "debug-code" : {
             "description": "Agent for debug Anythings",
-            "mode" : "subagent",
+            "mode" : "primary",
             "temperature": 0.1,
             "prompt": "{file:.promptes/debug.md}",
             "tools": {
@@ -24,7 +24,7 @@
         },
         "github-action" : {
             "description": "Agent for github actions",
-            "mode" : "subagent",
+            "mode" : "primary",
             "temperature": 0.2,
             "prompt": "{file:.promptes/github.md}",
             "tools": {
@@ -43,7 +43,7 @@
         },
         "codebase-analyse" : {
             "description": "Agent for analyse 100% codebase",
-            "mode" : "subagent",
+            "mode" : "primary",
             "temperature": 0.1,
             "prompt" : "{file:.promptes/codebase_analyse.md}",
             "tools": {
