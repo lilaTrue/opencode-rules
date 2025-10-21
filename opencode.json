@@ -74,6 +74,24 @@
                 "todoread" : false,
                 "webfetch" : true
             }
+        },
+        "designer" : {
+            "description" : "Agent for just design a UI/UX",
+            "mode" : "primary",
+            "prompt" : "{file:.promptes/designer.md}",
+            "tools" : {
+                "write" : true,
+                "edit" : true,
+                "bash" : true,
+                "read" : true,
+                "grep" : true,
+                "glop" : true,
+                "list" : true,
+                "patch" : true,
+                "todowrite" : true,
+                "todoread" : true,
+                "webfetch" : true
+            }
         }
     }
 }
