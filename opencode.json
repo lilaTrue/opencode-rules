@@ -28,25 +28,6 @@
                 "webfetch" : true
             }
         },
-        "github-action" : {
-            "description": "Agent for github actions",
-            "mode" : "primary",
-            "temperature": 0.2,
-            "prompt": "{file:.promptes/github.md}",
-            "tools": {
-                "write" : false,
-                "edit" : true,
-                "bash" : true,
-                "read" : true,
-                "grep" : true,
-                "glob" : true,
-                "list" : false,
-                "patch" : true,
-                "todowrite" : false,
-                "todoread" : false,
-                "webfetch" : false
-            }
-        },
         "codebase-analyse" : {
             "description": "Agent for analyse 100% codebase",
             "mode" : "primary",
@@ -108,7 +89,7 @@
             "description": "CODE ANYTHING",
             "mode" : "primary",
             "temperature": 0.1,
-            "prompt" : "{file:.promptes/coding.md}",
+            "prompt" : "{file:.promptes/god.md}",
             "tools": {
                 "write" : true,
                 "edit" : true,
