@@ -54,6 +54,44 @@
                 "todoread" : false,
                 "webfetch" : false
             }
+        },
+        // Agent for codebase analyser
+        "codebase-analyse" : {
+            "description": "Agent for analyse 100% codebase",
+            "mode" : "subagent",
+            "prompt" : "{file:.promptes/codebase_analyse.md}",
+            "tools": {
+                "write" : false,
+                "edit" : false,
+                "bash" : true,
+                "read" : true,
+                "grep" : true,
+                "glop" : true,
+                "list" : false,
+                "patch" : false,
+                "todowrite" : false,
+                "todoread" : false,
+                "webfetch" : false
+            }
+        },
+        // Agent for analyse project thinkings
+        "project-thinker" : {
+            "description" : "Agent for just thinks a project",
+            "mode" : "primary",
+            "prompt" : "{file:.promptes/project_thinkers.md}",
+            "tools" : {
+                "write" : false,
+                "edit" : false,
+                "bash" : false,
+                "read" : false,
+                "grep" : false,
+                "glop" : false,
+                "list" : false,
+                "patch" : false,
+                "todowrite" : false,
+                "todoread" : false,
+                "webfetch" : true
+            }
         }
     }
 }
