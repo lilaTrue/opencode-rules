@@ -14,6 +14,25 @@
             "disable": true
         },
 
+        "thinking": {
+            "mode": "subagent",
+            "description": "Reasoning agent",
+            "prompt": "{file:./opencode/.prompts/subagents/thinking.txt}",
+            "tools": {
+                "write" : false,
+                "edit" : false,
+                "read" : true,
+                "bash" : false,
+                "glob" : true,
+                "grep" : true,
+                "list" : false,
+                "patch" : false,
+                "todowrite" : false,
+                "todoread": false,
+            },
+            "temperature": 0.0
+        },
+
         "chat": {
             "mode": "primary",
             "description": "Chat assistant",
@@ -21,6 +40,7 @@
             "tools": {
                 "write" : false,
                 "edit" : false,
+                "read" : true,
                 "bash" : false,
                 "glob" : true,
                 "grep" : true,
@@ -38,6 +58,7 @@
             "tools": {
                 "write" : true,
                 "edit" : true,
+                "read" : true,
                 "bash" : true,
                 "glob" : true,
                 "grep" : true,
