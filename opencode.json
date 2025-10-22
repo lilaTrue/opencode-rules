@@ -1,108 +1,53 @@
 {
     "$schema": "https://opencode.ai/config.json",
-    "instructions": [".rules/*.md"],
-
+    "instructions": [
+        "opencode/.rules/AGENTS.md"
+    ],
     "agent": {
-        "build": {
-            "disable": true
-        },
         "general": {
             "disable": true
         },
-        "debug-code" : {
-            "description": "Agent for debug Anythings",
-            "mode" : "primary",
-            "temperature": 0.1,
-            "prompt": "{file:.promptes/debug.md}",
-            "tools": {
-                "write" : false,
-                "edit" : true,
-                "bash" : true,
-                "read" : true,
-                "grep" : true,
-                "glob" : true,
-                "list" : true,
-                "patch" : true,
-                "todowrite" : true,
-                "todoread" : true,
-                "webfetch" : true
-            }
+        "plan": {
+            "disable": true
         },
-        "codebase-analyse" : {
-            "description": "Agent for analyse 100% codebase",
-            "mode" : "primary",
-            "temperature": 0.1,
-            "prompt" : "{file:.promptes/codebase_analyse.md}",
-            "tools": {
-                "write" : false,
-                "edit" : false,
-                "bash" : true,
-                "read" : true,
-                "grep" : true,
-                "glob" : true,
-                "list" : false,
-                "patch" : false,
-                "todowrite" : false,
-                "todoread" : false,
-                "webfetch" : false
-            }
+        "build": {
+            "disable": true
         },
-        "project-thinker" : {
-            "description" : "Agent for just thinks a project",
-            "mode" : "primary",
-            "temperature": 0.5,
-            "prompt" : "{file:.promptes/project_thinkers.md}",
-            "tools" : {
+
+        "chat": {
+            "mode": "primary",
+            "description": "Chat assistant",
+            "prompt": "{file:./opencode/.prompts/chat.txt}",
+            "tools": {
                 "write" : false,
                 "edit" : false,
                 "bash" : false,
-                "read" : false,
-                "grep" : false,
-                "glop" : false,
+                "glob" : true,
+                "grep" : true,
                 "list" : false,
                 "patch" : false,
                 "todowrite" : false,
-                "todoread" : false,
-                "webfetch" : true
-            }
+                "todoread": false
+            },
+            "temperature": 0.0
         },
-        "designer" : {
-            "description" : "Agent for just design a UI/UX",
-            "mode" : "primary",
-            "prompt" : "{file:.promptes/designer.md}",
-            "temperature": 0.3,
-            "tools" : {
-                "write" : true,
-                "edit" : true,
-                "bash" : true,
-                "read" : true,
-                "grep" : true,
-                "glob" : true,
-                "list" : true,
-                "patch" : true,
-                "todowrite" : true,
-                "todoread" : true,
-                "webfetch" : true
-            }
-        },
-        "coding" : {
-            "description": "CODE ANYTHING",
-            "mode" : "primary",
-            "temperature": 0.1,
-            "prompt" : "{file:.promptes/god.md}",
+        "coding": {
+            "mode": "primary",
+            "description": "Code assistant",
+            "prompt": "{file:./opencode/.prompts/coding.txt}",
             "tools": {
                 "write" : true,
                 "edit" : true,
                 "bash" : true,
-                "read" : true,
-                "grep" : true,
                 "glob" : true,
+                "grep" : true,
                 "list" : true,
                 "patch" : true,
                 "todowrite" : true,
-                "todoread" : true,
-                "webfetch" : true
-            }
+                "todoread": true
+            },
+            "temperature": 0.0
         }
+
     }
 }
