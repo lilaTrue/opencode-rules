@@ -41,3 +41,20 @@ The rules are organized in the following files:
 ## Contributing
 
 Contributions are welcome! Please follow the rules outlined in this repository.
+
+## Stats
+
+### Repository Stats
+![GitHub stars](https://img.shields.io/github/stars/lilaTrue/opencode-rules?style=social)
+![GitHub forks](https://img.shields.io/github/forks/lilaTrue/opencode-rules?style=social)
+![GitHub issues](https://img.shields.io/github/issues/lilaTrue/opencode-rules)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/lilaTrue/opencode-rules)
+
+### GitHub Stats
+![LilaTrue's GitHub stats](https://github-readme-stats.vercel.app/api?username=LilaTrue&show_icons=true&theme=radical)
+
+### Top Languages
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LilaTrue&layout=compact)
+
+### GitHub Streak
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=LilaTrue)
