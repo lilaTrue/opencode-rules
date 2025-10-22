@@ -49,6 +49,7 @@ Contributions are welcome! Please follow the rules outlined in this repository.
 ![GitHub forks](https://img.shields.io/github/forks/lilaTrue/opencode-rules?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/lilaTrue/opencode-rules)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/lilaTrue/opencode-rules)
+[![Star History Chart](https://api.star-history.com/svg?repos=lilaTrue/opencode-rules&type=Date)](https://star-history.com/#lilaTrue/opencode-rules&Date)
 
 ### GitHub Stats
 ![LilaTrue's GitHub stats](https://github-readme-stats.vercel.app/api?username=LilaTrue&show_icons=true&theme=radical)
