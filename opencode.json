@@ -28,7 +28,7 @@
                 "list" : false,
                 "patch" : false,
                 "todowrite" : false,
-                "todoread": false,
+                "todoread": false
             },
             "temperature": 0.0
         },
