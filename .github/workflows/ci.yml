@@ -1,29 +1,54 @@
-name: CI
+name: Repository Consistency Check
 
 on:
   push:
-    branches: [ main, test ]
+    branches: [ master, test ]
   pull_request:
-    branches: [ main, test ]
+    branches: [ master, test ]
 
 jobs:
-  test:
+  check-consistency:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
+    - name: Check repository structure
+      run: |
+        echo "Checking repository structure..."
+        
+        # Verify required directories exist
+        if [ -d "opencode" ]; then
+          echo "✓ opencode directory found"
+        else
+          echo "✗ opencode directory missing"
+          exit 1
+        fi
+        
+        # Check for opencode.json
+        if [ -f "opencode.json" ]; then
+          echo "✓ opencode.json found"
+        else
+          echo "✗ opencode.json missing"
+          exit 1
+        fi
+        
+        # Verify opencode subdirectories
+        if [ -d "opencode/.prompts" ] && [ -d "opencode/.rules" ]; then
+          echo "✓ Required subdirectories found"
+        else
+          echo "✗ Missing required subdirectories (.prompts or .rules)"
+          exit 1
+        fi
+        
+        echo "Repository structure is consistent ✓"
 
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Run tests
-      run: npm test
-
-    - name: Run linter
-      run: npm run lint
+    - name: Validate JSON format
+      run: |
+        echo "Validating opencode.json format..."
+        if python3 -m json.tool opencode.json > /dev/null 2>&1; then
+          echo "✓ JSON is valid"
+        else
+          echo "✗ JSON format is invalid"
+          exit 1
+        fi
